@@ -19,7 +19,7 @@ sub get_term_bgcolor {
 
     my %args = @_;
 
-    [200, "OK", get_term_bgcolor()];
+    [200, "OK", XTerm::Util::get_term_bgcolor()];
 }
 
 $SPEC{set_term_bgcolor} = {
@@ -38,7 +38,7 @@ sub set_term_bgcolor {
 
     my %args = @_;
 
-    set_term_bgcolor($args{rgb});
+    XTerm::Util::set_term_bgcolor($args{rgb});
     [200, "OK"];
 }
 
